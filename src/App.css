@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #1a237e, #283593);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links button {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.nav-links button:hover, .nav-links button.active {
+  background: white;
+  color: #1a237e;
+}
+
+.content {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard h2, .add-job h2, .ai-feedback h2 {
+  margin-bottom: 20px;
+  color: #1a237e;
+  font-size: 28px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #1a237e;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.status-bar {
+  margin: 10px 0;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.applied { background: #e3f2fd; color: #1565c0; }
+.status.interview { background: #fff3e0; color: #e65100; }
+.status.offered { background: #e8f5e9; color: #2e7d32; }
+.status.rejected { background: #ffebee; color: #c62828; }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #ef5350;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-job .form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  max-width: 700px;
+}
+
+.add-job input, .add-job select, .add-job textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-job textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+}
+
+.add-job button {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #1a237e, #283593);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.message {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.ai-feedback {
+  max-width: 800px;
+}
+
+.ai-feedback textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  outline: none;
+  resize: vertical;
+}
+
+.ai-feedback button {
+  background: linear-gradient(135deg, #1a237e, #283593);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.ai-feedback button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.feedback-result {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.feedback-result h3 {
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.feedback-result pre {
+  white-space: pre-wrap;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
